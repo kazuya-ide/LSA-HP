@@ -5,25 +5,17 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
 
-// ナビメニュー
+// === ナビメニュー ===
 const navLinks = [
-  { label: "TOP", href: "https://www.lit4.net/" },
-  { label: "北海工務店", href: "https://www.sapporo-builderr.com/" },
-  {
-    label: "AJITO",
-    href: "https://www.hotpepper.jp/strJ003324016/?vos=evhpppg0007&pog=mt(b)ti(kwd-2315813023436)dv(c)cr(738602708295)fi()gi(142320910489)ci(17559560127)lc(9197678)ps()nw(g)&gclsrc=aw.ds&gad_source=1&gad_campaignid=17559560127&gbraid=0AAAAADSGJMF8UfGYenHmXncxBoGksCJdF&gclid=Cj0KCQjw267GBhCSARIsAOjVJ4FvKhbtUyL-OaINmCU5Z7tA3F__LdJTakr_XpoBgMLw0RkCTi2mr3EaApipEALw_wcB",
-  },
-  { label: "Lsecurity", href: "/product" },
-  { label: "探偵業", href: "/lsa" },
-  { label: "会社情報", href: "/about" },
+  { label: "HOME", href: "/" },
+  { label: "企業情報", href: "/about" },
+  { label: "事業紹介", href: "/services" },
+  { label: "グループ紹介", href: "/group-companies" },
   { label: "採用情報", href: "/recruit" },
 ];
 
-// 右側ボタン
-const rightButtons = [
-  { label: "お役立ち資料", href: "/docs" },
-  { label: "お問い合わせ", href: "/contact" },
-];
+// === 右側ボタン ===
+const rightButtons = [{ label: "お問い合わせ", href: "/contact" }];
 
 const Header = () => {
   const pathname = usePathname();
@@ -31,7 +23,7 @@ const Header = () => {
 
   // === ページによる背景色切り替え ===
   const headerBg =
-    pathname === "/tantei"
+    pathname === "/lsa"
       ? "bg-emerald-50/90 border-emerald-300"
       : "bg-[#ededed]/90 border-gray-300";
 
@@ -40,12 +32,12 @@ const Header = () => {
       className={`fixed top-0 w-full z-50 backdrop-blur shadow-sm border-b transition-colors duration-300 ${headerBg}`}
     >
       <div className="mx-auto max-w-[1440px] flex items-center justify-between h-20 px-6">
-        {/* ロゴ */}
+        {/* --- ロゴ --- */}
         <Link href="/" className="flex items-center gap-3 min-w-[150px]">
           <div className="relative w-10 h-10">
             <Image
               src="/lit-logo.jpg"
-              alt="LLC-LIT ロゴ"
+              alt="合同会社LIT ロゴ"
               fill
               className="object-contain"
               sizes="40px"
@@ -57,8 +49,8 @@ const Header = () => {
           </span>
         </Link>
 
-        {/* PCナビ */}
-        <nav className="hidden lg:flex items-center gap-7 text-base font-bold tracking-wide text-[#232323]">
+        {/* --- PCナビ --- */}
+        <nav className="hidden lg:flex items-center gap-6 text-base font-bold tracking-wide text-[#232323]">
           {navLinks.map(({ label, href }) => (
             <Link
               key={href}
@@ -68,13 +60,14 @@ const Header = () => {
                   ? "text-black underline underline-offset-4"
                   : "hover:text-[#666]"
               }`}
+              target={href.startsWith("http") ? "_blank" : "_self"}
             >
               {label}
             </Link>
           ))}
         </nav>
 
-        {/* 右側ボタン */}
+        {/* --- 右側ボタン --- */}
         <div className="hidden lg:flex gap-3">
           {rightButtons.map(({ label, href }) => (
             <Link
@@ -87,7 +80,7 @@ const Header = () => {
           ))}
         </div>
 
-        {/* ハンバーガーメニュー */}
+        {/* --- ハンバーガーメニュー --- */}
         <button
           className="block lg:hidden ml-2"
           onClick={() => setIsMenuOpen(true)}
@@ -106,7 +99,7 @@ const Header = () => {
         </button>
       </div>
 
-      {/* モバイルメニュー */}
+      {/* --- モバイルメニュー --- */}
       <div
         className={`fixed inset-0 z-[99] bg-black bg-opacity-40 transition-all duration-300 ${
           isMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
@@ -116,7 +109,7 @@ const Header = () => {
       >
         <nav
           className={`absolute right-0 top-0 h-full w-[75vw] max-w-sm ${
-            pathname === "/tantei" ? "bg-emerald-100" : "bg-[#ededed]"
+            pathname === "/lsa" ? "bg-emerald-100" : "bg-[#ededed]"
           } p-8 pt-24 shadow-2xl transition-transform duration-300 ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
@@ -137,6 +130,7 @@ const Header = () => {
               <path d="M6 6l12 12M6 18L18 6" strokeLinecap="round" />
             </svg>
           </button>
+
           <div className="flex flex-col gap-6">
             {navLinks.map(({ label, href }) => (
               <Link
@@ -148,10 +142,12 @@ const Header = () => {
                     : "text-[#232323] hover:text-black"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
+                target={href.startsWith("http") ? "_blank" : "_self"}
               >
                 {label}
               </Link>
             ))}
+
             <div className="mt-6 flex flex-col gap-2">
               {rightButtons.map(({ label, href }) => (
                 <Link
