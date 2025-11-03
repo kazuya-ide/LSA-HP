@@ -15,7 +15,7 @@ const services: Service[] = [
     lead: "裁判で使える証拠を徹底収集",
     detail:
       "行動の時系列・入退室の瞬間・接触相手まで、法的活用を見据えた形式で丁寧に記録。弁護士連携にも対応します。",
-    image: "/meishii-hua-jiato-huagroom.jpg",
+    image: "/uwakityousa.jpg",
     alt: "浮気調査のイメージ",
   },
   {
@@ -23,7 +23,7 @@ const services: Service[] = [
     lead: "行動記録を詳細にレポート",
     detail:
       "対象者の動線・立ち寄り先・接触人物を合法の範囲で取得。写真とログを整理した読みやすい報告書を納品します。",
-    image: "/ri-bennofutokotowo-buiteiru-ren.jpg",
+    image: "/sokoutyousa.jpg",
     alt: "素行調査のイメージ",
   },
   {
@@ -31,7 +31,7 @@ const services: Service[] = [
     lead: "反社チェック・雇用前調査も対応",
     detail:
       "公開情報の裏付けや現地確認を組み合わせ、信用リスクを多角的に確認。採用前の経歴・トラブル歴の確認も可能です。",
-    image: "/takushino-yun-zhuan-shouka-gu-keno-zhun-beiwoshiteimasu.jpg",
+    image: "/kigyoutyousa.jpg",
     alt: "企業調査のイメージ",
   },
   {
@@ -39,7 +39,7 @@ const services: Service[] = [
     lead: "法的対応まで一貫して支援",
     detail:
       "記録化と安全確保を最優先に、警察相談の同席や弁護士連携までサポート。夜間の同行や自宅周辺の警戒強化にも対応。",
-    image: "/ye-buku-nu-xingno-hourono-jing-se.jpg",
+    image: "/suto-ka-.jpg",
     alt: "ストーカー対策のイメージ",
   },
   {
@@ -47,7 +47,7 @@ const services: Service[] = [
     lead: "日常から特別な場面まで安全を守ります",
     detail:
       "通勤・通学の同行からイベント時の警護まで、状況に応じた体制で未然防止を徹底。警察OBの知見で安心を提供します。",
-    image: "/eriawo-jianteiruhaiankurukato-nu-xing.jpg",
+    image: "/body-guard.jpg",
     alt: "身辺警護のイメージ",
   },
 ];

@@ -3,19 +3,19 @@
 
 export default function HeroVideo() {
   return (
-    <div className="w-screen pt-20"> {/* ヘッダー高さ64pxぶん余白 */}
+    <div className="w-screen mt-[100px] flex justify-center">
+      {/* ↑ ヘッダーより少し広めの余白（約100px） */}
+
       <video
-        className="block w-full h-auto"  // 横幅100%、高さは比率自動
+        className="w-full max-w-7xl h-[550px] md:h-[700px] object-cover rounded-2xl shadow-2xl"
         autoPlay
         muted
         loop
         playsInline
         preload="metadata"
         poster="/hero-poster.jpg"
-        controls  // 確認用（不要なら削除OK）
       >
-        <source src="/file.mp4" type="video/mp4" />
-        <source src="/file.webm" type="video/webm" />
+        <source src="/LSAtop.mp4" type="video/mp4" />
         お使いのブラウザは動画に対応していません。
       </video>
     </div>

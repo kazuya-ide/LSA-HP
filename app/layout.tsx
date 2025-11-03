@@ -3,11 +3,23 @@ import "./globals.css";
 import Header from "@/app/components/Header/MyHeader";
 import FooterWrapper from "@/app/components/FooterWrapper";
 
-export const metadata: Metadata = {
-  title: "合同会社LIT",
+export const metadata = {
+  metadataBase: new URL("https://l-security-lit.com"), // ← 本番URLを指定
+  title: {
+    default: "L-Secret Agent 探偵調査部門｜札幌の調査・浮気・企業調査",
+    template: "%s｜L-Secret Agent",
+  },
   description:
-    "北海道で地域社会に貢献することを目的に活動している会社です。北海道をよりよく、住みやすい街に。その一助になれるように日々邁進しております",
+    "札幌を拠点とするL-Secret Agent探偵調査部門。浮気・不倫調査、素行調査、企業調査、ストーカー対策、身辺警護などに対応します。",
+  openGraph: {
+    images: ["/LSArogo.jpg"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/LSArogo.jpg"],
+  },
 };
+
 
 export default function RootLayout({
   children,

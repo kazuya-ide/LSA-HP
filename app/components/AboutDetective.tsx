@@ -69,8 +69,8 @@ export default function AboutDetective() {
         {/* 右：イメージ（カバー表示） */}
         <div className="relative h-[260px] md:h-auto min-h-[360px] rounded-md overflow-hidden shadow-sm border border-emerald-100">
           <Image
-            src="/hokkaido_pref_e8_22_4_21_1.jpg"    // public/ に画像を置く
-            alt="デスクに広げた調査ツールのイメージ"
+            src="/hokkaido_map.jpg"    // public/ に画像を置く
+            alt="北海道の地図"
             fill
             priority
             className="object-cover"
