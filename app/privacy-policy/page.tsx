@@ -3,80 +3,133 @@ import React from "react";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="bg-neutral-950 min-h-screen py-14 px-3">
-      <div className="max-w-3xl mx-auto bg-neutral-900/90 rounded-2xl shadow-2xl px-6 md:px-10 py-12 border border-slate-700">
-        <h1 className="text-3xl md:text-4xl font-extrabold text-yellow-400 mb-8 text-center drop-shadow tracking-tight">
+    <div className="bg-gradient-to-b from-white to-emerald-50 min-h-screen py-14 px-3">
+      <div className="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg px-6 md:px-10 py-12 border border-emerald-200">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-emerald-700 mb-8 text-center tracking-tight">
           プライバシーポリシー
         </h1>
-        <div className="text-gray-100 text-base md:text-lg leading-relaxed space-y-9">
+        <div className="text-gray-800 text-base md:text-lg leading-relaxed space-y-9">
           <section>
             <p>
-              合同会社LIT（以下「当社」といいます）は、警備サービス事業における個人情報保護の重要性を認識し、個人情報保護に関する法令等を遵守し、以下の方針に基づきお客様および従業員の個人情報を適切に取り扱い、保護に努めます。
+              L-Secret Agent（以下「当社」といいます）は、探偵業法、個人情報保護法および関連法令を遵守し、
+              個人情報の適正な取扱いを社会的責務と認識しています。
+              当社は、依頼者・相談者・調査対象者など、関係するすべての方のプライバシーを保護するため、以下の方針に基づき個人情報の管理・運用を行います。
             </p>
           </section>
 
           {[
-            { h: "1. 個人情報の取得について", t: "警備契約の締結・履行・お問い合わせ・求人応募等の際に、適法かつ公正な手段により個人情報を取得します。" },
+            {
+              h: "1. 個人情報の取得について",
+              t: "当社は、依頼内容の確認・調査・報告・連絡・契約など業務の遂行に必要な範囲で、適法かつ公正な手段により個人情報を取得します。違法・不当な手段による収集は一切行いません。"
+            },
             {
               h: "2. 個人情報の利用目的",
               t: (
-                <ul className="list-disc list-inside pl-4 space-y-1 text-yellow-100">
-                  <li>警備業務の受託・提供および履行管理</li>
-                  <li>お問い合わせやご相談への対応</li>
-                  <li>警備員採用選考および雇用管理</li>
-                  <li>お客様へのご連絡、各種ご案内や資料送付</li>
-                  <li>契約や法律に基づく手続きおよび履行</li>
-                  <li>その他、ご本人の同意を得た目的での利用</li>
+                <ul className="list-disc list-inside pl-4 space-y-1 text-emerald-700">
+                  <li>探偵業務（調査・報告・助言など）の遂行および契約履行のため</li>
+                  <li>お問い合わせ、見積依頼等への回答・連絡のため</li>
+                  <li>従業員・調査員・協力会社の人事・安全管理のため</li>
+                  <li>法令等に基づく報告・提出義務の履行のため</li>
+                  <li>その他、ご本人の同意を得た利用目的のため</li>
                 </ul>
               )
             },
-            { h: "3. 個人情報の第三者提供", t: "ご本人の同意がある場合、法令に基づく場合、または人命・身体・財産の保護のために緊急を要する場合を除き、個人情報を第三者に提供することはありません。" },
-            { h: "4. 個人情報の管理", t: "取得した個人情報を正確かつ最新の内容に保つよう努め、不正アクセス・紛失・漏洩・改ざん・破壊等のリスクから守るため、適切な安全管理措置を講じます。" },
-            { h: "5. 個人情報の開示・訂正・利用停止等", t: "ご本人または代理人から、個人情報の開示・訂正・追加・削除・利用停止・消去・第三者提供の停止等を求められた場合、法令に従い、適切かつ速やかに対応いたします。" },
-            { h: "6. 委託先の管理", t: "業務委託により個人情報の取り扱いを外部委託する場合は、適切な委託先を選定し、契約等により個人情報の適正な管理を義務付けます。" },
-            { h: "7. 法令・規範の遵守と見直し", t: "個人情報に関する法令・規範を遵守するとともに、社会情勢や技術の変化等に応じて、本ポリシーを適宜見直し、改善に努めます。" },
-            { h: "8. Cookie（クッキー）の利用について", t: "サービス向上・利便性向上・サイトの利用状況分析のためCookie（クッキー）を利用することがあります。Cookieによって取得される情報には、個人を特定できる情報は含まれません。ご利用者様はブラウザの設定によりCookieの受け入れを拒否することも可能ですが、一部機能が正しくご利用いただけなくなる場合があります。" },
             {
-              h: "9. アクセス解析ツールについて", t: (
+              h: "3. 個人情報の第三者提供",
+              t: "当社は、ご本人の同意がある場合、または法令に基づく場合を除き、個人情報を第三者に提供しません。ただし、弁護士・警察・裁判所など公的機関からの適法な要請がある場合には、法令に従って対応します。"
+            },
+            {
+              h: "4. 機微情報の取扱い",
+              t: "思想・信条・宗教・犯罪歴・健康等の機微情報については、業務上の必要があり、かつご本人の同意を得た場合にのみ取得・利用します。取得した機微情報は厳重に管理し、不要となった場合は速やかに廃棄します。"
+            },
+            {
+              h: "5. 調査記録および証拠資料の管理",
+              t: "調査によって取得した写真・映像・録音・報告書などの証拠資料は、暗号化・アクセス制限・保管期限の設定など適切な安全管理措置を講じ、契約終了後は一定期間の保管を経て安全に廃棄します。"
+            },
+            {
+              h: "6. 委託先の管理",
+              t: "当社が業務の一部を外部に委託する場合は、個人情報を適正に取り扱う委託先を選定し、契約等により個人情報の安全管理を義務付け、必要かつ適切に監督します。"
+            },
+            {
+              h: "7. 開示・訂正・削除等の請求",
+              t: "ご本人または代理人から、個人情報の開示・訂正・利用停止・削除等の請求があった場合、法令および探偵業法の規定に従い、適切かつ迅速に対応します。"
+            },
+            {
+              h: "8. Cookieの利用について",
+              t: "当サイトでは、利用者の利便性向上やアクセス解析のためにCookieを利用しています。Cookieによって個人を特定する情報を収集することはありません。ブラウザ設定によりCookieの無効化も可能です。"
+            },
+            {
+              h: "9. アクセス解析ツールの利用",
+              t: (
                 <>
-                  当社WEBサイトでは、Google Analytics等のアクセス解析ツールを利用しています。これらツールはトラフィックデータの収集のためにCookieを使用することがあり、収集されるデータは匿名であり、個人を特定するものではありません。詳細はGoogle社のプライバシーポリシーをご参照ください。
-                  <br />
-                  <a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer" className="underline text-yellow-400">Google プライバシーポリシー</a>
+                  当サイトでは、Google Analyticsなどのアクセス解析ツールを使用しています。  
+                  これらのツールはトラフィックデータの収集のためにCookieを使用し、個人を特定できる情報は含みません。  
+                  詳細は以下をご確認ください：<br />
+                  <a
+                    href="https://policies.google.com/privacy?hl=ja"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline text-emerald-700"
+                  >
+                    Google プライバシーポリシー
+                  </a>
                 </>
               )
             },
-            { h: "10. SNS等の外部サービスについて", t: "Instagram、X（旧Twitter）、LINE公式アカウント等のSNSサービスの埋め込みやシェアボタンを設置しています。これらのサービスをご利用の場合、各サービス運営会社がCookie等を通じてユーザー情報を取得する場合があります。取得された情報の取扱いについては、各SNSのプライバシーポリシー等をご確認ください。" },
             {
-              h: "11. Google reCAPTCHAの利用について", t: (
-                <>
-                  セキュリティ向上やスパム防止のためにGoogle reCAPTCHAを利用しています。reCAPTCHAによって取得される情報は、Googleのプライバシーポリシーおよび利用規約に基づき利用されます。
-                  <br />
-                  <a href="https://policies.google.com/privacy?hl=ja" target="_blank" rel="noopener noreferrer" className="underline text-yellow-400">Google プライバシーポリシー</a><br />
-                  <a href="https://policies.google.com/terms?hl=ja" target="_blank" rel="noopener noreferrer" className="underline text-yellow-400">Google 利用規約</a>
-                </>
-              )
+              h: "10. 外部サービスとの連携",
+              t: "当サイトには、SNS共有ボタンや外部サービスの埋め込みコンテンツが含まれる場合があります。これらのサービスを利用する際は、各運営会社がCookie等により利用者情報を取得する場合があります。詳細は各SNSのプライバシーポリシーをご確認ください。"
+            },
+            {
+              h: "11. セキュリティ対策",
+              t: "当社は、個人情報の漏えい・紛失・改ざん・不正アクセス等を防止するため、ファイアウォール・暗号化・アクセス権限管理などの技術的および組織的な安全対策を実施しています。"
+            },
+            {
+              h: "12. 法令・方針の見直し",
+              t: "当社は、社会情勢や法令改正、技術の進歩等に応じて、本プライバシーポリシーを継続的に見直し、改善に努めます。改訂後の内容は、当サイト上に掲載した時点で効力を有します。"
             }
           ].map(({ h, t }) => (
             <section key={h}>
-              <h2 className="text-xl md:text-2xl font-bold text-yellow-300 mb-2 border-l-4 border-yellow-400 pl-3">{h}</h2>
-              <div>{t}</div>
+              <h2 className="text-xl md:text-2xl font-bold text-emerald-700 mb-2 border-l-4 border-emerald-500 pl-3">
+                {h}
+              </h2>
+              <div className="text-gray-700">{t}</div>
             </section>
           ))}
 
           <section>
-            <h2 className="text-xl md:text-2xl font-bold text-yellow-300 mb-2 border-l-4 border-yellow-400 pl-3">12. お問い合わせ窓口</h2>
-            <p>個人情報の取扱いに関するご相談・お問い合わせ・開示請求等は、下記窓口までご連絡ください。</p>
-            <div className="bg-neutral-800 border border-yellow-300/30 rounded-lg px-6 py-5 mt-3 text-sm text-gray-200">
-              合同会社LIT（L security）<br />
-              〒063-0061 北海道札幌市西区西町北１４丁目１−１５ ホクシンビル３F<br />
-              TEL：<a href="tel:0112156432" className="underline text-yellow-300 ml-1">011-215-6432</a><br />
-              E-mail：<a href="mailto:info@llc-lit.com" className="underline text-yellow-300 ml-1">info@llc-lit.com</a>
+            <h2 className="text-xl md:text-2xl font-bold text-emerald-700 mb-2 border-l-4 border-emerald-500 pl-3">
+              13. お問い合わせ窓口
+            </h2>
+            <p>
+              個人情報および調査資料の取扱いに関するご相談・開示請求等は、以下の窓口までご連絡ください。
+            </p>
+            <div className="bg-emerald-50 border border-emerald-200 rounded-lg px-6 py-5 mt-3 text-sm text-gray-700">
+              L-Secret Agent（合同会社LIT 探偵調査部門）<br />
+              〒063-0061 北海道札幌市西区西町北14丁目1-15 ホクシンビル3F<br />
+              TEL：
+              <a
+                href="tel:0112156432"
+                className="underline text-emerald-700 ml-1"
+              >
+                011-215-6432
+              </a>
+              <br />
+              E-mail：
+              <a
+                href="mailto:info@llc-lit.com"
+                className="underline text-emerald-700 ml-1"
+              >
+                info@llc-lit.com
+              </a>
             </div>
           </section>
         </div>
-        <div className="mt-10 text-xs text-gray-400 text-right">
+
+        <div className="mt-10 text-xs text-gray-500 text-right">
           制定日：2024年6月18日<br />
-          合同会社LIT　代表社員　堀内 勝
+          改訂日：2025年11月3日<br />
+          L-Secret Agent　代表社員　堀内 勝
         </div>
       </div>
     </div>

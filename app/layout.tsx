@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/app/components/Header/MyHeader";
 import FooterWrapper from "@/app/components/FooterWrapper";
+import Link from "next/link";
 
-// ✅ Metadata型を明示的に指定
 export const metadata: Metadata = {
   metadataBase: new URL("https://l-security-lit.com"),
   title: {
@@ -28,10 +28,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body className="bg-[#ededed] text-[#232323] antialiased min-h-screen font-sans">
+      <body className="bg-[#ededed] text-[#232323] antialiased min-h-screen font-sans relative">
         <Header />
         <main className="min-h-[70vh]">{children}</main>
         <FooterWrapper />
+
+        {/* ✅ 固定表示「お問い合わせ」ボタン */}
+        <Link
+          href="/contact"
+          className="fixed bottom-6 right-6 z-50 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-transform transform hover:scale-105"
+        >
+          📞 お問い合わせ
+        </Link>
       </body>
     </html>
   );
