@@ -3,8 +3,9 @@ import "./globals.css";
 import Header from "@/app/components/Header/MyHeader";
 import FooterWrapper from "@/app/components/FooterWrapper";
 
-export const metadata = {
-  metadataBase: new URL("https://l-security-lit.com"), // ← 本番URLを指定
+// ✅ Metadata型を明示的に指定
+export const metadata: Metadata = {
+  metadataBase: new URL("https://l-security-lit.com"),
   title: {
     default: "L-Secret Agent 探偵調査部門｜札幌の調査・浮気・企業調査",
     template: "%s｜L-Secret Agent",
@@ -19,7 +20,6 @@ export const metadata = {
     images: ["/LSArogo.jpg"],
   },
 };
-
 
 export default function RootLayout({
   children,

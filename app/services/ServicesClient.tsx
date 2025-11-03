@@ -15,7 +15,7 @@ export default function ServicesClient() {
       {/* === HEROセクション === */}
       <section className="relative flex items-center justify-center h-[70vh] bg-emerald-900 text-white text-center overflow-hidden">
         <Image
-          src="/service-hero.jpg"
+          src="/LSArogo.jpg"
           alt="探偵サービスの背景"
           fill
           priority
